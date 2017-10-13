@@ -13,9 +13,9 @@ class TestDashboard(TestCase):
         obj = mixer.blend(Reimbursement, search_vector=None)
         self.urls = (
             resolve_url('dashboard:index'),
-            resolve_url('dashboard:core_reimbursement_changelist'),
-            resolve_url('dashboard:core_reimbursement_change', obj.pk),
-            resolve_url('dashboard:core_reimbursement_history', obj.pk),
+            resolve_url('dashboard:chamber_of_deputies_reimbursement_changelist'),
+            resolve_url('dashboard:chamber_of_deputies_reimbursement_change', obj.pk),
+            resolve_url('dashboard:chamber_of_deputies_reimbursement_history', obj.pk),
         )
         self.forbidden = (
             '/login/',
