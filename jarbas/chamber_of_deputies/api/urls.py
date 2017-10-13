@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from jarbas.api.views import (
+from jarbas.chamber_of_deputies.api.views import (
     ApplicantListView,
     CompanyDetailView,
     ReceiptDetailView,
