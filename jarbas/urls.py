@@ -21,7 +21,7 @@ from jarbas.frontend.views import home
 
 urlpatterns = [
     url(r'^$', home, name='home'),
-    url(r'^api/', include('jarbas.api.urls', namespace='api')),
+    url(r'^api/chamber_of_deputies/', include('jarbas.chamber_of_deputies.api.urls', namespace='chamber_of_deputies_api')),
     url(r'^dashboard/', include('jarbas.dashboard.urls'))
 ]
 
