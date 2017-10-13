@@ -4,7 +4,7 @@ from django.shortcuts import resolve_url
 from django.test import TestCase
 from mixer.backend.django import mixer
 
-from jarbas.core.models import Reimbursement
+from jarbas.chamber_of_deputies.models import Reimbursement
 
 
 class TestDashboard(TestCase):
