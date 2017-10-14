@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from jarbas.chamber_of_deputies.models import Reimbursement
-from jarbas.core.models import Activity, Company
+from jarbas.core.models import Company
 
 
 class ReimbursementSerializer(serializers.ModelSerializer):
@@ -120,24 +120,6 @@ class SubquotaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reimbursement
         fields = ('subquota_id', 'subquota_description')
-
-
-class ActivitySerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Activity
-        fields = ('code', 'description')
-
-
-class CompanySerializer(serializers.ModelSerializer):
-
-    main_activity = ActivitySerializer(many=True, read_only=True)
-    secondary_activity = ActivitySerializer(many=True, read_only=True)
-
-    class Meta:
-        model = Company
-        exclude = ('id',)
-        depth = 1
 
 
 def format_cnpj(cnpj):
